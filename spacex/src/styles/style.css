@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #222;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  
+}
+
+/* ==================
+    general layout
+===================== */
+
+/* navigation */
+.header {
+  background: rgb(0, 0, 0, .70);
+  margin: 0;
+}
+.header-content {
+  display: flex;
+  padding: 1rem;
+  
+}
+
+.logo {
+  color: white;  
+  margin-right: 2rem;
+}
+
+.nav {
+  position: fixed;
+  background: #000;
+  width: 100%;  
+  top: 0;
+  right: 0; 
+  bottom: 0;
+  left: 100%;
+  transform: translateX(0);
+  transition: transform 250ms; 
+}
+.navigation-open {
+  transform: translateX(-100%);
+}
+
+.nav-list {
+  display: flex;
+  list-style: none; 
+  margin: 0;
+  padding: 0; 
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 700; 
+  text-transform: uppercase; 
+  margin-right: 1em;
+  letter-spacing: .03rem;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: yellow; 
+}
+
+.close-nav {
+  border: 0;
+  background: 0;
+  color: white;
+  font-weight: 700;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: .5em;
+  position: absolute;
+}
+
+.open-nav {
+  border: 0;
+  background: 0;
+  color: #fff;
+  cursor: pointer;
+  padding: .5em;
+  margin-left: auto;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .open-nav,
+  .close-nav {
+    display: none;
+  }
+
+  .nav {
+    position: initial;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .nav-link {
+    font-size: .9rem;
+  }
+  .nav-item {
+    margin-left: 1em;
+
+  }
+}
+
+/*layout */
+
+.container {
+  width: 98%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+/* Main Styling */
+
+.main-container {
+  margin-top: 0;
+  background-image: url(../images/pic4Lm.jpg);
+  background-size: cover;
+  padding: 260px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/***************************
+wrapper for the countdownn
+***************************/
+.wrapper {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.transbox {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background: rgba(37, 35, 35, 0.8);
+  left:0px;
+  bottom: 0px;
+}
+
+/*countdown Styling */
+.countdown {
+  display: flex;
+}
+
+
+p.numbers {font-size: 6em}
+
+
+
+div.cd-box {
+  display: flex;
+  flex-direction: column;
+  color:white;
+  padding: 2em;
+  text-align: center;
+
+}
+.strings {
+  font-size: 1.5rem;
+}
+
