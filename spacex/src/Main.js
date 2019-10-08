@@ -36,7 +36,7 @@ class Main extends React.Component {
             <main>
                 <div className="main-container">
                    <div className="transbox">
-                    <div className="container">
+                    <div className="timer-container">
                         <Timer nextLaunch = {this.state.itemsP} />
                     </div>
                    </div>

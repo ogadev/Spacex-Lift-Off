@@ -58,27 +58,30 @@ class Timer extends React.Component{
 
    
     return (    
-        <div className="wrapper">
-            <div className="countdown">
-                <div className="cd-box">
-                    <p className="numbers days">00</p>
-                    <p className= "strings timeRefSeconds">Days</p>
+            <div className="countdown-container">
+                <div className="next-launch">
+                    <h2 className="cd-mission-name">Mission-name</h2>
+                    <h2>Date  44:44:44</h2>
                 </div>
-                <div className="cd-box">
-                    <p className="numbers hours">00</p>
-                    <p className= "strings timeRefSeconds">Hours</p>
-                </div>
-                <div className="cd-box">
-                    <p className="numbers minutes">00</p>
-                    <p className= "strings timeRefSeconds">Minutes</p>
-                </div>
-                <div className="cd-box">
-                    <p className="numbers seconds">00</p>
-                    <p className= "strings timeRefSeconds">Seconds</p>
+                <div className="countdown">
+                    <div className="cd-box">
+                        <p className="numbers days">00</p>
+                        <p className= "strings timeRefSeconds">Days</p>
+                    </div>
+                    <div className="cd-box">
+                        <p className="numbers hours">00</p>
+                        <p className= "strings timeRefSeconds">Hours</p>
+                    </div>
+                    <div className="cd-box">
+                        <p className="numbers minutes">00</p>
+                        <p className= "strings timeRefSeconds">Minutes</p>
+                    </div>
+                    <div className="cd-box">
+                        <p className="numbers seconds">00</p>
+                        <p className= "strings timeRefSeconds">Seconds</p>
+                    </div>
                 </div>
             </div>
-
-        </div>
     )
     
 
