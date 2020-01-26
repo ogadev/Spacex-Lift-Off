@@ -219,4 +219,10 @@ footer {
   color: white;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+  /*TODO: add some zoom or something */
+}
+
 
