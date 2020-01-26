@@ -1,6 +1,11 @@
 function Time(obj){
     const currentDate = new Date();
     const dateObj = new Date(obj.launch_date_unix * 1000);
+    var month = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"][dateObj.getMonth()];
+    var day = dateObj.getUTCDate();
+    var year = dateObj.getFullYear();
+    var dateString = `${month} ${day}, ${year}`
 
     const milLeft = dateObj - currentDate;
     const days = Math.floor((milLeft/(1000 * 60 * 60 * 24)));
@@ -14,7 +19,7 @@ function Time(obj){
         minute: minutes,
         second: seconds,
         missionName: obj.mission_name,
-        launchDate: dateObj
+        launchDate: dateString
     };
     return result;
 }

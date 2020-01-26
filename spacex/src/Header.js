@@ -35,10 +35,8 @@ class Header extends React.Component {
                     <nav className="nav"> 
                         <button aria-label="close navigation" className="close-nav" onClick={this.closeNav}>&times;</button>
                         <ul className="nav-list">
-                            <li className="nav-item"><a href="#" className="nav-link">Home</a></li>
                             <li className="nav-item"><a href="#" className="nav-link">Upcoming</a></li>
-                            <li className="nav-item"><a href="#" className="nav-link">Previous Launches</a></li>
-                            <li className="nav-item"><a href="#" className="nav-link">Rockets</a></li>
+                            <li className="nav-item"><a href="#" className="nav-link">Previous</a></li>
                             <li className="nav-item"><a href="#" className="nav-link">About</a></li>
                         </ul>
                     </nav>

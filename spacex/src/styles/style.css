@@ -28,12 +28,13 @@ body {
 .header-content {
   display: flex;
   padding: 1rem;
-  
+
 }
 
 .logo {
   color: white;  
   margin-right: 2rem;
+  margin-left: 1rem;
 }
 
 .nav {
@@ -61,9 +62,8 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  
-
 }
+
 .nav-link {
   color: white;
   text-decoration: none;
@@ -98,7 +98,7 @@ body {
   font-size: 1.5rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 718px) {
   .open-nav,
   .close-nav {
     display: none;
@@ -109,6 +109,7 @@ body {
   }
 
   .nav-list {
+    display: flex;
     flex-direction: row;
     justify-content: flex-start;
   }
@@ -116,7 +117,7 @@ body {
     font-size: .9rem;
   }
   .nav-item {
-    margin-left: 1em;
+    margin-left: 4em;
 
   }
 }
@@ -129,7 +130,6 @@ body {
   margin: 0 auto;
 }
 
-
 /* Main Styling */
 
 .main-container {
@@ -139,8 +139,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-color:#464646;
-  border-top: 0px solid transparent; /* or whatever color */
-  border-bottom: 0px solid transparent; /* or whatever color */
+  border-top: 0px solid transparent; 
+  border-bottom: 0px solid transparent; 
   width: 100%;
   height: 520px;
   position: relative;
@@ -163,18 +163,20 @@ wrapper for the countdownn
 /*countdown Styling */
 .next-launch {
   display: flex;
+  justify-content: left;
+  margin-left: 8rem;
   color:white;
-  justify-content: space-between
 }
 .countdown {
   display: flex;
+  margin: 0 2rem;
 }
 
 
 p.numbers {font-size: 4.5rem}
 
 .timer-container {
-  max-width: 900px;
+  max-width: 90%;
   margin: 0 auto; 
   bottom: 0;
 }
@@ -183,11 +185,38 @@ p.numbers {font-size: 4.5rem}
   display: flex;
   flex-direction: column;
   color:white;
-  padding: 1.3em;
+  padding: 0;
   text-align: center;
   margin: 0 auto;
 }
 .strings {
   font-size: 1.3rem;
 }
+
+
+/***************************
+Footer style
+***************************/
+
+
+footer {
+  background: black;
+}
+
+.footer-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 200px;  
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 3px;
+}
+
+.footer-div a {
+ 
+  color: white;
+}
+
 
