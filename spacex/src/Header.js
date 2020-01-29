@@ -38,9 +38,9 @@ class Header extends React.Component {
                     <nav className="nav"> 
                         <button aria-label="close navigation" className="close-nav" onClick={this.closeNav}>&times;</button>
                         <ul className="nav-list">
-                            <li className="nav-item"><Link to="/upcoming" className="nav-link">Upcoming</Link></li>
                             <li className="nav-item"><Link to="/previous" className="nav-link">Previous</Link></li>
-                            <li className="nav-item"><Link to="/about" className="nav-link">About</Link></li>
+                            <li className="nav-item"><Link to="/upcoming" className="nav-link">Upcoming</Link></li>            
+                            <li className="nav-item"><a href="https://www.spacex.com/about" className="nav-link">About</a></li>
                         </ul>
                     </nav>
                     <label htmlFor="nav-toggle" className="nav-toggle-label">

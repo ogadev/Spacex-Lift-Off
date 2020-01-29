@@ -4,11 +4,13 @@ import Card from './Card';
 function Previous(props) {
 
     const [data, setData] = useState(null);
-     
+    const [load, setLoad] = useState(false) 
+
     const fetchData = async () => {
         const response = await fetch("https://api.spacexdata.com/v3/launches/past");
         const res = await response.json();        
-        setData(res)      
+        setData(res)   
+        setLoad(true)   
     }   
 
     useEffect(() => {
@@ -32,7 +34,7 @@ function Previous(props) {
     return(
         <div className="cards-backgrond">
             <div className="cards-page">
-                {cards}    
+              {load ? cards : <h1 style={{color: "white"}}>Loading...</h1>}    
             </div>
         </div>
     )

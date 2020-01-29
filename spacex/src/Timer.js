@@ -15,6 +15,7 @@ class Timer extends React.Component{
             isLoaded: false,
             launchDate: ''
         };
+        this.theMTimer = 0;
         this.setTime = this.setTime.bind(this);
         this.startTime = this.startTime.bind(this);
     }
@@ -40,15 +41,20 @@ class Timer extends React.Component{
             seconds: obj.second,
             minutes: obj.minute,
             hours: obj.hour,
-            days: obj.day,   
+            days: obj.day, 
+            isLoaded: true  
         });
     }
   
     startTime(data) {
-      setInterval(() => {
+      this.theMTimer = setInterval(() => {
           
           this.setTime(data);
       }, 1000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.theMTimer)
     }
   
     
@@ -64,16 +70,16 @@ class Timer extends React.Component{
                         <p className= "strings timeRefSeconds">Days</p>
                     </div>
                     <div className="cd-box">
-                        <p className="numbers hours"> <TimeDisplay time={this.state.hours} /> </p>
-                        <p className= "strings timeRefSeconds">Hours</p>
+                        <div className="numbers hours"> <TimeDisplay time={this.state.hours} /> </div>
+                        <div className= "strings timeRefSeconds">Hours</div>
                     </div>
                     <div className="cd-box">
-                        <p className="numbers minutes"><TimeDisplay time={this.state.minutes} /></p>
-                        <p className= "strings timeRefSeconds">Minutes</p>
+                        <div className="numbers minutes"><TimeDisplay time={this.state.minutes} /></div>
+                        <div className= "strings timeRefSeconds">Minutes</div>
                     </div>
                     <div className="cd-box">
-                        <p className="numbers seconds"><TimeDisplay time={this.state.seconds} /></p>
-                        <p className= "strings timeRefSeconds">Seconds</p>
+                        <div className="numbers seconds"><TimeDisplay time={this.state.seconds} /></div>
+                        <div className= "strings timeRefSeconds">Seconds</div>
                     </div>
                 </div>
             </div>
