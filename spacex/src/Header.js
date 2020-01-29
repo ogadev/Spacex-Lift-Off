@@ -1,8 +1,7 @@
 import React from 'react'
 import './styles/style.css'
-import {Switch, Route, Link} from "react-router-dom"
+import {Link} from "react-router-dom"
 
-import dummy from './Upcoming';
 
 class Header extends React.Component {
     constructor() {

@@ -1,7 +1,18 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import Card from './Card'
+
 function Upcoming(props) {
+
+    // const [data, setData] = useState();
+    // useEffect(() =>{
+    //     fetch("")
+    // }[]);
+
     return(
-        <h1>this is Upcoming</h1>
+        <div className="cards-page">
+            <Card />
+        </div>
+       
     )
 }
 export default Upcoming;

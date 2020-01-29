@@ -12,8 +12,8 @@ class Timer extends React.Component{
             hours: 0,
             minutes: 0,
             seconds: 0,         
-            launchDate: "",
             isLoaded: false,
+            launchDate: ''
         };
         this.setTime = this.setTime.bind(this);
         this.startTime = this.startTime.bind(this);
@@ -23,7 +23,8 @@ class Timer extends React.Component{
             .then(response => response.json())
             .then(
                 (resData) => {
-                    let obj = Time(resData)
+                    const NewTime = new Time();
+                    let obj = NewTime.getTimer(resData)
                     this.setState({
                         launchDate: obj.launchDate,
                         missionName: obj.missionName
@@ -32,15 +33,14 @@ class Timer extends React.Component{
                 });
     }
     setTime(data){
-        let obj = Time(data)
+        const NewTime = new Time();
+        let obj = NewTime.getTimer(data)
      
         this.setState({
             seconds: obj.second,
             minutes: obj.minute,
             hours: obj.hour,
-            days: obj.day,
-            launchDate: obj.launchDate
-            
+            days: obj.day,   
         });
     }
   
@@ -50,6 +50,7 @@ class Timer extends React.Component{
           this.setTime(data);
       }, 1000);
     }
+  
     
     render() {
         return (    

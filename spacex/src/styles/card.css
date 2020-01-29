@@ -1,0 +1,56 @@
+
+.card {
+    /* box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.6); */
+    /* transition: 0.3s; */
+    color:white;
+    width: 250px;
+    margin: 15px;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.4);   
+}
+
+.card-container {
+    padding: 2px 16px;
+    height: 360px;
+    background: rgba(255, 255, 255, 0.167);
+   
+
+  /* Required for text-overflow to do anything */
+   
+}  
+
+.card-container a {    
+    color: white;
+}
+
+img {
+    width: 100%;
+}
+
+.launch-name{
+  margin: 10px 0;
+}
+.card-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+
+.cards-page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cards-backgrond {
+
+    background-image: url(../images/repeated-square-dark.png);
+}
+
+
+

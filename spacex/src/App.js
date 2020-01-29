@@ -7,7 +7,9 @@ import Previous from './Previous'
 import About from './About'
 import Footer from "./Footer"
 
-import {Switch, Route, Router} from "react-router-dom"
+import {Switch, Route} from "react-router-dom"
+
+import Card from './Card';
 
 function App() {
   return (
@@ -17,10 +19,10 @@ function App() {
           <Route exact path="/">
             <Main />
           </Route>
-          <Route path="/upcoming">
+          <Route className="card-page-container" path="/upcoming">
             <Upcoming />
           </Route>
-          <Route path="/previous">
+          <Route className="card-page-container" path="/previous">
             <Previous />
           </Route>
           <Route path="/about">
