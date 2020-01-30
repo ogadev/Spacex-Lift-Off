@@ -7,7 +7,7 @@ function Previous(props) {
     const [load, setLoad] = useState(false) 
 
     const fetchData = async () => {
-        const response = await fetch("https://api.spacexdata.com/v3/launches/past");
+        const response = await fetch("https://api.spacexdata.com/v3/launches/past?order=desc");
         const res = await response.json();        
         setData(res)   
         setLoad(true)   
