@@ -1,3 +1,8 @@
+## Project website [here](https://spacex-fc49e.firebaseapp.com)
+
+This site was made using the [Spacex API](https://github.com/r-spacex/SpaceX-API)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
