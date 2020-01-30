@@ -62,7 +62,7 @@ class Timer extends React.Component{
         return (    
             <div className="countdown-container">
                 <div className="next-launch ">
-                    <h2 className="cd-mission-name">{this.state.missionName} takes off in:</h2>
+                    <h2 className="cd-mission-name">{this.state.missionName}:</h2>
                 </div>
                 <div className="countdown">
                     <div className="cd-box">
